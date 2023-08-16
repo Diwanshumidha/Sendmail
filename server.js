@@ -18,7 +18,7 @@ app.use(cors());
 
 
 app.post("/send", function (req, res) {
-    const {name,email,message,phone,location} = req.body
+    const {name,email,message,mobileNumber,location} = req.body
 
     console.log(req.body)
     let transporter = nodemailer.createTransport({
@@ -44,7 +44,7 @@ let HtmlOption = `
     <h3>Contact Details</h3>
     <ul>
     <li> Name: ${name}</li>
-    <li> Phone Number: ${phone}</li>
+    <li> Phone Number: ${mobileNumber}</li>
     <li> Email: ${email}</li>
     <li> Location: ${location}</li>
     </ul>
